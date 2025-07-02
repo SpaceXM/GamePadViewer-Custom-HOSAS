@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body {
+  background-color: black;
+}
+
+.controller.generic {
+  font-family: 'Orbitron', sans-serif;
+  color: #03b2e1;
+  position: relative;
+  transform: scale(1.5);
+}
+
+/* Stick sinistro (usato come PITCH/ROLL) */
+.stick.left {
+  border: 2px solid #03b2e1;
+  border-radius: 10px;
+  width: 120px;
+  height: 120px;
+  top: 200px;
+  left: 100px;
+  background-image:
+    linear-gradient(0deg, transparent 48%, #002f3b 49%, #002f3b 51%, transparent 52%),
+    linear-gradient(90deg, transparent 48%, #002f3b 49%, #002f3b 51%, transparent 52%);
+}
+
+/* Stick destro (usato come LATERAL/VERTICAL) */
+.stick.right {
+  border: 2px solid #03b2e1;
+  border-radius: 10px;
+  width: 120px;
+  height: 120px;
+  top: 200px;
+  left: 300px;
+  background-image:
+    linear-gradient(0deg, transparent 48%, #002f3b 49%, #002f3b 51%, transparent 52%),
+    linear-gradient(90deg, transparent 48%, #002f3b 49%, #002f3b 51%, transparent 52%);
+}
+
+/* Indicatori stick (pallini rossi) */
+.stick.left .thumb, .stick.right .thumb {
+  background-color: red !important;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+/* Trigger sinistro come THROTTLE */
+.trigger.left {
+  width: 30px;
+  height: 200px;
+  border: 2px solid #03b2e1;
+  border-radius: 20px;
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  background-color: transparent;
+}
+
+.trigger.left:after {
+  content: 'THROTTLE';
+  position: absolute;
+  top: 90px;
+  left: 40px;
+  transform: rotate(90deg);
+  color: #03b2e1;
+  font-size: 12px;
+}
+
+/* Pulsanti ABXY rinominati */
+.button.a:after {
+  content: 'BOOST';
+  color: #03b2e1;
+}
+.button.b:after {
+  content: 'FA';
+  color: #03b2e1;
+}
+.button.x:after {
+  content: 'ECM';
+  color: #03b2e1;
+}
+.button.y:after {
+  content: 'CHAFF';
+  color: #03b2e1;
+}
+
+/* Yaw simulato sul trigger destro */
+.trigger.right {
+  border: 2px solid #03b2e1;
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  position: absolute;
+  top: 40px;
+  left: 280px;
+  background-color: transparent;
+}
+
+.trigger.right:after {
+  content: 'YAW';
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  color: #03b2e1;
+  font-size: 12px;
+}
