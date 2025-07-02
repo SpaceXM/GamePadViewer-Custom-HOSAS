@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron:400,500');
+
+.custom.controller {
+  width: 1900px;
+  height: 400px;
+  font-family: 'Orbitron', sans-serif;
+  position: relative;
+  background: black;
+}
+
+/* 🕹️ Stick sinistro (Pitch / Roll) */
+.custom .sticks {
+  width: 140px;
+  height: 140px;
+  background: black;
+  border: 2px solid #03b2e1;
+  border-radius: 15px;
+  position: absolute;
+  top: 220px;
+  left: 120px;
+  background-image:
+    linear-gradient(0deg, transparent 48%, #002f3b 49%, #002f3b 51%, transparent 52%),
+    linear-gradient(90deg, transparent 48%, #002f3b 49%, #002f3b 51%, transparent 52%);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2px;
+}
+
+.custom .sticks:before {
+  content: "PITCH";
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15px;
+  color: #03b2e1;
+}
+
+.custom .sticks:after {
+  content: "ROLL";
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  transform: translateY(-50%) rotate(-90deg);
+  font-size: 15px;
+  color: #03b2e1;
+}
+
+/* Stick centrale */
+.custom .stick.left {
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+/* Nascondi secondo stick */
+.custom .stick.right {
+  display: none;
+}
+
+/* 🎚️ Trigger sinistro → THROTTLE */
+.custom .trigger.left {
+  position: absolute;
+  width: 30px;
+  height: 200px;
+  background: black;
+  border: 2px solid #03b2e1;
+  border-radius: 25px;
+  top: 40px;
+  left: 50px;
+}
+
+.custom .trigger.left:after {
+  content: "THROTTLE";
+  position: absolute;
+  left: 35px;
+  top: 90px;
+  transform: rotate(90deg);
+  color: #03b2e1;
+  font-size: 12px;
+}
+
+/* 🎛️ Trigger destro → YAW */
+.custom .trigger.right {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  background: black;
+  border: 2px solid #03b2e1;
+  border-radius: 25px;
+  top: 40px;
+  right: 50px;
+}
+
+.custom .trigger.right:after {
+  content: "YAW";
+  position: absolute;
+  top: -20px;
+  left: 35px;
+  font-size: 12px;
+  color: #03b2e1;
+}
+
+/* 🎯 Pulsanti principali */
+.custom .button {
+  position: absolute;
+  background: black;
+  border: 2px solid #03b2e1;
+  color: #03b2e1;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 25px;
+  transition: 0.2s ease;
+}
+
+/* FA Button */
+.custom .bumper.right:after {
+  content: "FA";
+  position: absolute;
+  left: 60px;
+  top: 40px;
+  width: 60px;
+  text-align: center;
+  background: black;
+  border: 2px solid #03b2e1;
+  border-radius: 25px;
+  color: #03b2e1;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* FA OFF quando premuto */
+.custom .bumper.right.pressed:after {
+  content: "FA OFF";
+  background: red;
+  color: black;
+  border-color: black;
+}
+
+/* Pulsante CHAFF */
+.custom .button.y:after {
+  content: "CHAFF";
+  position: absolute;
+  right: 80px;
+  top: 0px;
+  background: black;
+  border: 2px solid #03b2e1;
+  border-radius: 25px;
+  color: #03b2e1;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* BOOST (A) */
+.custom .button.a:after {
+  content: "BOOST";
+  position: absolute;
+  left: 80px;
+  top: 0px;
+  background: black;
+  border: 2px solid #03b2e1;
+  border-radius: 25px;
+  color: #03b2e1;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* ECM (X) */
+.custom .button.x:after {
+  content: "ECM";
+  position: absolute;
+  left: 160px;
+  top: 40px;
+  background: black;
+  border: 2px solid #03b2e1;
+  border-radius: 25px;
+  color: #03b2e1;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* SHIELD (B) */
+.custom .button.b:after {
+  content: "SHIELD";
+  position: absolute;
+  left: 160px;
+  top: 0px;
+  background: black;
+  border: 2px solid #03b2e1;
+  border-radius: 25px;
+  color: #03b2e1;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Stato premuto → rosso */
+.custom .bumper.pressed:after,
+.custom .button.pressed:after {
+  background: red !important;
+  color: black !important;
+  border-color: black !important;
+}
