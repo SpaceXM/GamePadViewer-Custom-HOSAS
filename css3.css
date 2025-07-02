@@ -1,0 +1,84 @@
+/* Scala e sfondo */
+.controller.generic {
+  transform: scale(1.6);
+  filter: brightness(1.2);
+}
+
+/* Stick sinistro = PITCH/ROLL */
+.stick.left {
+  width: 120px;
+  height: 120px;
+  background: #000;
+  border: 2px solid #03b2e1;
+  border-radius: 12px;
+  background-image:
+    linear-gradient(0deg, transparent 48%, #002f3b 49%, #002f3b 51%, transparent 52%),
+    linear-gradient(90deg, transparent 48%, #002f3b 49%, #002f3b 51%, transparent 52%);
+  background-size: 100% 100%;
+}
+.stick.left .thumb {
+  width: 20px;
+  height: 20px;
+  background: red !important;
+  border-radius: 50%;
+}
+
+/* Stick destro = LATERAL/VERTICAL */
+.stick.right {
+  width: 120px;
+  height: 120px;
+  background: #000;
+  border: 2px solid #03b2e1;
+  border-radius: 12px;
+  background-image:
+    linear-gradient(0deg, transparent 48%, #002f3b 49%, #002f3b 51%, transparent 52%),
+    linear-gradient(90deg, transparent 48%, #002f3b 49%, #002f3b 51%, transparent 52%);
+  background-size: 100% 100%;
+}
+.stick.right .thumb {
+  width: 20px;
+  height: 20px;
+  background: red !important;
+  border-radius: 50%;
+}
+
+/* Trigger sinistro = THROTTLE */
+.trigger.left {
+  height: 200px;
+  width: 30px;
+  border: 2px solid #03b2e1;
+  border-radius: 20px;
+  background: #000;
+}
+.trigger.left:after {
+  content: 'THROTTLE';
+  position: absolute;
+  top: 80px;
+  left: 35px;
+  transform: rotate(90deg);
+  font-size: 12px;
+  color: #03b2e1;
+}
+
+/* Trigger destro = YAW bar */
+.trigger.right {
+  width: 100px;
+  height: 30px;
+  border: 2px solid #03b2e1;
+  border-radius: 20px;
+  background: #000;
+}
+.trigger.right:after {
+  content: 'YAW';
+  position: absolute;
+  top: -20px;
+  left: 35px;
+  font-size: 12px;
+  color: #03b2e1;
+}
+
+/* Pulsanti con etichette */
+.button.a:after { content: 'BOOST'; color: #03b2e1; }
+.button.b:after { content: 'FA'; color: #03b2e1; }
+.button.x:after { content: 'ECM'; color: #03b2e1; }
+.button.y:after { content: 'CHAFF'; color: #03b2e1; }
